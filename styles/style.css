@@ -284,7 +284,39 @@ header {
 .recomendation-card .recomendation-overlay:hover {
   text-decoration: underline;
 }
+/* Стилі для динамічної галереї */
+.image-gallery {
+    /* Робить контейнер Flex-контейнером */
+    display: flex;
+    /* Вирівнює елементи по центру */
+    justify-content: center;
+    /* Дозволяє елементам переноситися, якщо вони не поміщаються (хоча ми хочемо в лінію) */
+    flex-wrap: wrap; 
+    
+    /* Мінімальні декоративні стилі */
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 2px solid #000;
+}
+.image-gallery {
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 2px solid #000;
+    text-align: center;
+}
 
+.image-gallery h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.dynamic-image {
+    width: 250px; 
+    height: 375px; 
+    object-fit: cover; 
+    margin: 10px;
+}
 .bestseleru {
   width: 100%;
   padding: 20px 0;
