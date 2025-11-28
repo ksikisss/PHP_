@@ -1,0 +1,70 @@
+@use '../layout/main/mixins'
+@use '../layout/main/variables'
+
+
+body
+  font-family: variables.$font-stack
+  background-color: variables.$white
+  color: variables.$text-color
+
+main
+  padding: 0 30px
+
+header
+  background-color: variables.$primary-color
+  border-bottom: 2px solid variables.$primary-color
+  position: relative
+  z-index: 1000
+
+.header-top
+  @include mixins.flex-center     // ✅ Додано префікс
+  padding: 20px 60px
+  position: relative
+
+  .search-container
+    position: absolute
+    left: 60px
+    @include mixins.flex-center   // ✅ Додано префікс
+    gap: 10px
+
+    .search-icon
+      width: 20px
+      height: 20px
+
+    .search-input
+      font-size: 16px
+      padding: 5px 10px
+      border: none
+      border-bottom: 2px solid variables.$white
+      background: transparent
+      color: variables.$white
+      outline: none
+      width: 180px
+
+  .logo-block
+    text-align: center
+    color: variables.$white
+
+    .logo
+      font-size: 24px
+      font-weight: bold
+
+    h2
+      font-size: 16px
+      font-weight: normal
+      color: variables.$secondary-color
+
+  .account-link
+    position: absolute
+    right: 60px
+    color: variables.$white
+    font-size: 16px
+    font-weight: normal
+
+    a
+      color: variables.$white
+      text-decoration: none
+      transition: color 0.3s ease
+
+      &:hover                     // ✅ Виправлено псевдоклас
+        color: variables.$secondary-color

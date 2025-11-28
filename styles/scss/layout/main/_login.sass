@@ -1,0 +1,21 @@
+@use 'variables'
+.login-page
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh        // Висота на всю сторінку
+  background: #fefefe      // Світлий фон
+  margin: 0                // Без зовнішніх відступів
+
+.login-container
+  max-width: 400px
+  width: 100%
+  padding: 2rem
+  background: variables.$primary-color  // Темний фон із змінної
+  color: variables.$white
+  border-radius: 8px
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1)
+
+.login
+  text-align: center
+  margin-bottom: 1.5rem
