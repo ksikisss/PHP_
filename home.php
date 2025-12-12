@@ -13,7 +13,6 @@
     <meta name="author" content="Maybelline Ukraine">
     <script src="scripts/script.js" defer></script>
     <script src="scripts/matcher.js" defer></script>
-    <script src="scripts/set.js" defer></script>
     <title><?php echo htmlspecialchars($pageTitle ?? 'Maybelline New York – Офіційний сайт', ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 <body>
@@ -30,7 +29,6 @@
             </div>
             
             <div class="account-link">
-                <a href="index.php?route=api-demo">Cats API</a> /
                 <a href="index.php?route=signin">Акаунт</a>
             </div>
         </div>
@@ -104,9 +102,9 @@
         </nav>
     </header>
     <main>
-        <div class="video-banner">
+        <div class="video-banner">      
             <video id="video-player" muted autoplay playsinline></video>
-        </div>
+        </div>>
 
         <section class="product-list" aria-label="Нові засоби">
             <div class="new-products">

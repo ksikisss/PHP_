@@ -48,32 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-    // Створюємо DocumentFragment для оптимізації DOM
-    let fragment = document.createDocumentFragment();
-
-    // Обираємо батьківський елемент (не body) - додаємо після секції бестселерів
-    let parent = document.querySelector('main');
-
-    // Використовуємо forEach для ітерації по масиву imagesUrl
-    imagesUrl.forEach((url, index) => {
-        // Кожен новий елемент з'являється через секунду після попереднього
-        setTimeout(() => {
-            // Створюємо новий елемент img
-            let img = document.createElement("img");
-            img.src = url;
-            img.alt = "Maybelline Product Image " + (index + 1);
-            img.style.width = "200px"; // Задаємо розмір для видимості
-            img.style.margin = "10px";
-
-            // Додаємо зображення до батьківського елемента
-            parent.appendChild(img);
-        }, index * 1000); // Затримка 1 секунда між зображеннями
-    });
-    
-
-// Викликаємо функцію через 5 секунд після завантаження сторінки
-setTimeout(addImages, 5000);
-
     // Валідація форми авторизації 
     const loginForm = document.getElementById('login-form');
 
@@ -121,6 +95,3 @@ setTimeout(addImages, 5000);
             }
         });
     };
-
-    
-    
