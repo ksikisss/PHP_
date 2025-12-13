@@ -38,3 +38,43 @@
 [2025-12-13T10:40:14.166271+00:00] website_app.EMERGENCY: Система вийшла з ладу [] {"memory_usage":"2 MB"}
 [2025-12-13T10:40:14.166289+00:00] website_app.INFO: Адміністратор увійшов до системи {"user":{"id":456,"email":"user@example.com","role":"admin"}} {"memory_usage":"2 MB"}
 [2025-12-13T10:40:14.166317+00:00] website_app.INFO: Системна інформація {"system":{"php_version":"8.4.13","server":"localhost"}} {"memory_usage":"2 MB"}
+[2025-12-13T13:29:50.484651+00:00] website_app.DEBUG: Ініціалізація системи розпочата [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:50.487282+00:00] website_app.INFO: Веб-сайт успішно завантажено [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:50.487332+00:00] website_app.NOTICE: Користувач переглядає головну сторінку [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:50.487354+00:00] website_app.WARNING: Повільне завантаження сторінки [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:50.487374+00:00] website_app.ERROR: Помилка підключення до бази даних [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:50.487393+00:00] website_app.CRITICAL: Сервер недоступний [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:50.487413+00:00] website_app.ALERT: Критична вразливість виявлена [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:50.487431+00:00] website_app.EMERGENCY: Система вийшла з ладу [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:50.487450+00:00] website_app.INFO: Адміністратор увійшов до системи {"user":{"id":456,"email":"user@example.com","role":"admin"}} {"memory_usage":"2 MB"}
+[2025-12-13T13:29:50.487479+00:00] website_app.INFO: Системна інформація {"system":{"php_version":"8.4.13","server":"localhost"}} {"memory_usage":"2 MB"}
+[2025-12-13T13:29:59.782836+00:00] website_app.DEBUG: Ініціалізація системи розпочата [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:59.784424+00:00] website_app.INFO: Веб-сайт успішно завантажено [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:59.784478+00:00] website_app.NOTICE: Користувач переглядає головну сторінку [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:59.784500+00:00] website_app.WARNING: Повільне завантаження сторінки [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:59.784521+00:00] website_app.ERROR: Помилка підключення до бази даних [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:59.784540+00:00] website_app.CRITICAL: Сервер недоступний [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:59.784607+00:00] website_app.ALERT: Критична вразливість виявлена [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:59.784631+00:00] website_app.EMERGENCY: Система вийшла з ладу [] {"memory_usage":"2 MB"}
+[2025-12-13T13:29:59.784651+00:00] website_app.INFO: Адміністратор увійшов до системи {"user":{"id":456,"email":"user@example.com","role":"admin"}} {"memory_usage":"2 MB"}
+[2025-12-13T13:29:59.784676+00:00] website_app.INFO: Системна інформація {"system":{"php_version":"8.4.13","server":"localhost"}} {"memory_usage":"2 MB"}
+[2025-12-13T13:32:59.162937+00:00] website_app.DEBUG: Ініціалізація системи розпочата [] {"memory_usage":"2 MB"}
+[2025-12-13T13:32:59.164597+00:00] website_app.INFO: Веб-сайт успішно завантажено [] {"memory_usage":"2 MB"}
+[2025-12-13T13:32:59.164659+00:00] website_app.NOTICE: Користувач переглядає головну сторінку [] {"memory_usage":"2 MB"}
+[2025-12-13T13:32:59.164682+00:00] website_app.WARNING: Повільне завантаження сторінки [] {"memory_usage":"2 MB"}
+[2025-12-13T13:32:59.164702+00:00] website_app.ERROR: Помилка підключення до бази даних [] {"memory_usage":"2 MB"}
+[2025-12-13T13:32:59.164722+00:00] website_app.CRITICAL: Сервер недоступний [] {"memory_usage":"2 MB"}
+[2025-12-13T13:32:59.164740+00:00] website_app.ALERT: Критична вразливість виявлена [] {"memory_usage":"2 MB"}
+[2025-12-13T13:32:59.164758+00:00] website_app.EMERGENCY: Система вийшла з ладу [] {"memory_usage":"2 MB"}
+[2025-12-13T13:32:59.164777+00:00] website_app.INFO: Адміністратор увійшов до системи {"user":{"id":456,"email":"user@example.com","role":"admin"}} {"memory_usage":"2 MB"}
+[2025-12-13T13:32:59.164802+00:00] website_app.INFO: Системна інформація {"system":{"php_version":"8.4.13","server":"localhost"}} {"memory_usage":"2 MB"}
+[2025-12-13T13:33:07.034199+00:00] website_app.DEBUG: Ініціалізація системи розпочата [] {"memory_usage":"2 MB"}
+[2025-12-13T13:33:07.038775+00:00] website_app.INFO: Веб-сайт успішно завантажено [] {"memory_usage":"2 MB"}
+[2025-12-13T13:33:07.038943+00:00] website_app.NOTICE: Користувач переглядає головну сторінку [] {"memory_usage":"2 MB"}
+[2025-12-13T13:33:07.038986+00:00] website_app.WARNING: Повільне завантаження сторінки [] {"memory_usage":"2 MB"}
+[2025-12-13T13:33:07.039019+00:00] website_app.ERROR: Помилка підключення до бази даних [] {"memory_usage":"2 MB"}
+[2025-12-13T13:33:07.039051+00:00] website_app.CRITICAL: Сервер недоступний [] {"memory_usage":"2 MB"}
+[2025-12-13T13:33:07.039085+00:00] website_app.ALERT: Критична вразливість виявлена [] {"memory_usage":"2 MB"}
+[2025-12-13T13:33:07.039114+00:00] website_app.EMERGENCY: Система вийшла з ладу [] {"memory_usage":"2 MB"}
+[2025-12-13T13:33:07.039141+00:00] website_app.INFO: Адміністратор увійшов до системи {"user":{"id":456,"email":"user@example.com","role":"admin"}} {"memory_usage":"2 MB"}
+[2025-12-13T13:33:07.039182+00:00] website_app.INFO: Системна інформація {"system":{"php_version":"8.4.13","server":"localhost"}} {"memory_usage":"2 MB"}
