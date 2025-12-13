@@ -247,6 +247,38 @@
             </article>
         </section>
 
+        <section class="demos-section" aria-label="PHP Демонстрації">
+            <div class="new-products">
+                <div class="new-products-header">
+                    <h2>PHP<br>ДЕМОНСТРАЦІЇ</h2>
+                    <p>Перегляньте приклади роботи з різними PHP бібліотеками</p>
+                </div>
+            </div>
+
+            <div class="demo-links">
+                <a href="index.php?route=monolog_demo" class="demo-card">
+                    <div class="demo-content">
+                        <h3>📝 Monolog Demo</h3>
+                        <p>Демонстрація логування з використанням бібліотеки Monolog</p>
+                    </div>
+                </a>
+
+                <a href="index.php?route=carbon_demo" class="demo-card">
+                    <div class="demo-content">
+                        <h3>📅 Carbon Demo</h3>
+                        <p>Робота з датами та часом за допомогою бібліотеки Carbon</p>
+                    </div>
+                </a>
+
+                <a href="index.php?route=var_dumper_demo" class="demo-card">
+                    <div class="demo-content">
+                        <h3>🔍 VarDumper Demo</h3>
+                        <p>Красивий вивід даних з використанням Symfony VarDumper</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
         <section class="Set" aria-label="Порівняння фраз">
             <h2>Порівняння фраз</h2>
             <input

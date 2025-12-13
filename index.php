@@ -18,13 +18,28 @@ $routes = [
         'file'  => 'register.php',
         'title' => 'Реєстрація',
     ],
+    'monolog_demo' => [
+        'file'  => 'monolog_demo.php',
+        'title' => 'Monolog Демонстрація',
+    ],
+    'carbon_demo' => [
+        'file'  => 'carbon_demo.php',
+        'title' => 'Carbon Демонстрація',
+    ],
+    'var_dumper_demo' => [
+        'file'  => 'var_dumper_demo.php',
+        'title' => 'VarDumper Демонстрація',
+    ],
 ];
 
-// Елементи навігації 
+// Елементи навігації
 $navItems = [
     'home'   => 'Головна',
     'signin' => 'Вхід',
     'signup' => 'Реєстрація',
+    'monolog_demo' => 'Monolog Demo',
+    'carbon_demo' => 'Carbon Demo',
+    'var_dumper_demo' => 'VarDumper Demo',
 ];
 
 // Визначаємо, яку сторінку завантажувати

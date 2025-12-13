@@ -461,4 +461,92 @@ header {
   }
 }
 
+/* PHP Демонстрації секція */
+.demos-section {
+  margin-bottom: 30px;
+  padding: 20px 0;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.demos-section .new-products-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.demos-section .new-products-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.demos-section .new-products-header p {
+  font-size: 16px;
+  color: #666;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.demo-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.demo-card {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  width: calc(33.333% - 20px);
+  min-width: 250px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.demo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-color: #007bff;
+}
+
+.demo-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.demo-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive для демо секції */
+@media (max-width: 768px) {
+  .demo-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .demo-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .demos-section .new-products-header h2 {
+    font-size: 24px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

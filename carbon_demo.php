@@ -1,89 +1,99 @@
 <?php
+namespace Demo\CarbonExample;
+?>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <title><?php echo htmlspecialchars($pageTitle ?? 'Carbon Демонстрація', ENT_QUOTES, 'UTF-8'); ?></title>
+</head>
+<body>
+    <!-- Навігація роутера -->
+    <nav class="router-nav">
+        <ul>
+            <?php
+            global $navItems, $currentRoute;
+            foreach ($navItems as $route => $label) {
+                $activeClass = ($currentRoute === $route) ? 'active' : '';
+                echo "<li><a href='index.php?route=$route' class='$activeClass'>$label</a></li>";
+            }
+            ?>
+        </ul>
+    </nav>
 
-require_once 'vendor/autoload.php';
+    <main style="padding: 20px; font-family: Arial, sans-serif;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h1 style="text-align: center; margin-bottom: 30px;"> Carbon Демонстрація</h1>
 
-use Carbon\Carbon;
-use Carbon\CarbonInterval;
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <h2 style="color: #333; margin-bottom: 15px;">1. Поточний час</h2>
+                <div style="background-color: #fff; padding: 15px; border-radius: 4px; border: 1px solid #ddd;">
+                    <?php
+                    require_once 'vendor/autoload.php';
+                    use Carbon\Carbon;
+                    $tomorrow = Carbon::tomorrow();
+                    $now = Carbon::now();
+                    echo "<p><strong>Зараз:</strong> {$now->toDateTimeString()}</p>";
+                    echo "<p><strong>Дата:</strong> {$now->toDateString()}</p>";
+                    echo "<p><strong>Час:</strong> {$now->toTimeString()}</p>";
+                    echo "<p><strong>Завтра:</strong> {$tomorrow->toDateString()}</p>";
+                    ?>
+                </div>
+            </div>
 
-// Демонстрація роботи Carbon (дата і час)
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <h2 style="color: #333; margin-bottom: 15px;">2. Операції з датами</h2>
+                <div style="background-color: #fff; padding: 15px; border-radius: 4px; border: 1px solid #ddd;">
+                    <?php
+                    $date = Carbon::create(2025, 12, 12);
+                    
+                    echo "<p><strong>Базова дата:</strong> {$date->toDateString()}</p>";
+                    echo "<p><strong>+1 тиждень:</strong> {$date->copy()->addWeek()->toDateString()}</p>";
+                    echo "<p><strong>+1 місяць:</strong> {$date->copy()->addMonth()->toDateString()}</p>";
+                    echo "<p><strong>-5 днів:</strong> {$date->copy()->subDays(5)->toDateString()}</p>";
+                    ?>
+                </div>
+            </div>
 
-echo "=== Carbon Demo ===\n\n";
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <h2 style="color: #333; margin-bottom: 15px;">3. Форматування</h2>
+                <div style="background-color: #fff; padding: 15px; border-radius: 4px; border: 1px solid #ddd;">
+                    <?php
+                    $date = Carbon::create(2024, 3, 15, 14, 30, 45);
 
-// 1. Створення об'єктів Carbon
-echo "1. Створення об'єктів Carbon:\n";
+                    echo "<p><strong>Людський формат:</strong> {$date->format('l, F j, Y г. о H:i')}</p>";
+                    echo "<p><strong>Короткий:</strong> {$date->format('d.m.Y H:i')}</p>";
+                    ?>
+                </div>
+            </div>
 
-// Поточний час
-$now = Carbon::now();
-echo "Поточний час: " . $now->toDateTimeString() . "\n";
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <h2 style="color: #333; margin-bottom: 15px;">4. Часові пояси</h2>
+                <div style="background-color: #fff; padding: 15px; border-radius: 4px; border: 1px solid #ddd;">
+                    <?php
+                    $utc = Carbon::now('UTC');
+                    $kyiv = $utc->copy()->setTimezone('Europe/Kiev');
+                    $london = $utc->copy()->setTimezone('Europe/London');
 
-// Конкретна дата
-$specificDate = Carbon::create(2024, 12, 25, 10, 30, 0);
-echo "Конкретна дата: " . $specificDate->toDateTimeString() . "\n";
+                    echo "<p><strong>UTC:</strong> {$utc->toDateTimeString()}</p>";
+                    echo "<p><strong>Київ:</strong> {$kyiv->toDateTimeString()}</p>";
+                    echo "<p><strong>Лондон:</strong> {$london->toDateTimeString()}</p>";
+                    ?>
+                </div>
+            </div>
 
-// З рядка
-$dateFromString = Carbon::parse('2024-01-15 14:20:30');
-echo "З рядка: " . $dateFromString->toDateTimeString() . "\n\n";
+            <div style="background-color: #e8f5e8; padding: 20px; border-radius: 8px; border: 1px solid #4caf50;">
+                <h2 style="color: #2e7d32; margin-bottom: 15px;">✅ Результат</h2>
+                <p style="margin: 0;">Carbon дозволяє легко працювати з датами та часом в PHP!</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
 
-// 2. Форматування дат
-echo "2. Форматування дат:\n";
-$date = Carbon::create(2024, 3, 15, 9, 45, 30);
-
-echo "ISO формат: " . $date->toISOString() . "\n";
-echo "Людський формат: " . $date->format('l, F j, Y \a\t g:i A') . "\n";
-echo "Український формат: " . $date->locale('uk')->isoFormat('dddd, D MMMM YYYY [о] HH:mm') . "\n\n";
-
-// 3. Маніпуляції з датами
-echo "3. Маніпуляції з датами:\n";
-$baseDate = Carbon::create(2024, 6, 15);
-
-echo "Базова дата: " . $baseDate->toDateString() . "\n";
-echo "Через тиждень: " . $baseDate->addWeek()->toDateString() . "\n";
-echo "Через місяць: " . $baseDate->addMonth()->toDateString() . "\n";
-echo "Через рік: " . $baseDate->addYear()->toDateString() . "\n";
-echo "Мінус 5 днів: " . $baseDate->subDays(5)->toDateString() . "\n\n";
-
-// 4. Порівняння дат
-echo "4. Порівняння дат:\n";
-$date1 = Carbon::create(2024, 6, 15);
-$date2 = Carbon::create(2024, 6, 20);
-
-echo "Дата 1: " . $date1->toDateString() . "\n";
-echo "Дата 2: " . $date2->toDateString() . "\n";
-echo "Дата 1 < Дата 2: " . ($date1->lt($date2) ? 'Так' : 'Ні') . "\n";
-echo "Дата 1 > Дата 2: " . ($date1->gt($date2) ? 'Так' : 'Ні') . "\n";
-echo "Дата 1 == Дата 2: " . ($date1->eq($date2) ? 'Так' : 'Ні') . "\n";
-echo "Різниця в днях: " . $date1->diffInDays($date2) . " днів\n\n";
-
-// 5. Інтервали часу
-echo "5. Інтервали часу:\n";
-$interval = CarbonInterval::days(3)->hours(5)->minutes(30);
-echo "Інтервал: " . $interval->forHumans() . "\n";
-
-$start = Carbon::now();
-$end = $start->copy()->add($interval);
-echo "Початок: " . $start->toDateTimeString() . "\n";
-echo "Кінець: " . $end->toDateTimeString() . "\n\n";
-
-// 6. Робота з часовими поясами
-echo "6. Робота з часовими поясами:\n";
-$utc = Carbon::now('UTC');
-echo "UTC: " . $utc->toDateTimeString() . "\n";
-
-$kyiv = $utc->setTimezone('Europe/Kiev');
-echo "Київ: " . $kyiv->toDateTimeString() . "\n";
-
-$london = $utc->setTimezone('Europe/London');
-echo "Лондон: " . $london->toDateTimeString() . "\n\n";
-
-// 7. Корисні методи
-echo "7. Корисні методи:\n";
-$testDate = Carbon::create(2024, 2, 15);
-
-echo "Дата: " . $testDate->toDateString() . "\n";
-echo "День тижня: " . $testDate->dayName . "\n";
-echo "Місяць: " . $testDate->monthName . "\n";
-echo "Рік високосний: " . ($testDate->isLeapYear() ? 'Так' : 'Ні') . "\n";
-echo "Кінець місяця: " . $testDate->endOfMonth()->toDateString() . "\n";
-echo "Початок тижня: " . $testDate->startOfWeek()->toDateString() . "\n\n";
-
-echo "=== Демонстрація завершена ===\n";
+// Запуск демонстрації
+$demo = new CarbonDemo();
+$demo->execute();
