@@ -1,4 +1,4 @@
-<?php
+<?php 
 /** 
  * Файл контролера AboutMeController
  *
@@ -11,8 +11,10 @@
  * @version     1.2.0
  */
 namespace Classes;
+
 use Classes\Viewer;
-/** 
+
+/**
  * Клас AboutMeController
  *
  * Обробляє логіку для сторінки "Про мене".
@@ -32,11 +34,12 @@ class AboutMeController
         'Гра на гітарі',
         'Читання книг'
     ];
+
     /**
-     * Метод show 
+     * Метод show
      *
      * Основний метод контролера, який викликається роутером.
-     * Збирає дані про cтудента та передає їх у шаблон для рендерингу.
+     * Збирає дані про студента та передає їх у шаблон для рендерингу.
      *
      * @return void
      */
@@ -53,8 +56,9 @@ class AboutMeController
         // Рендеримо шаблон через Viewer як в інших контролерах
         Viewer::show('aboutme', $data);
     }
+
     /**
-     * Отримує ім'я студентв
+     * Отримує ім'я студента
      *
      * @return string Ім'я студента
      */
@@ -62,6 +66,7 @@ class AboutMeController
     {
         return $this->name;
     }
+
     /**
      * Отримує назву університету
      *
@@ -71,6 +76,7 @@ class AboutMeController
     {
         return $this->university;
     }
+
     /**
      * Отримує назву групи
      *
@@ -80,6 +86,7 @@ class AboutMeController
     {
         return $this->group;
     }
+
     /**
      * Отримує список хобі / захоплень
      *
